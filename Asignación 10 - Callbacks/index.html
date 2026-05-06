@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Callbacks a10</title>
+  <style>
+    body { font-family: monospace; background: #0a1628; color: #cce7ff; padding: 2rem; max-width: 650px; margin: 0 auto; }
+    h1   { color: #7dd3fc; }
+    h2   { color: #38bdf8; margin: 2rem 0 .5rem; border-bottom: 1px solid #1e3a5f; padding-bottom: .3rem; }
+    button { background: #0ea5e9; color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 6px; cursor: pointer; margin: .4rem 0; }
+    button:hover { background: #0284c7; }
+    input, select { background: #0f2744; border: 1px solid #1e4a7a; color: #cce7ff; padding: .4rem .6rem; border-radius: 6px; margin: .3rem; }
+    .row { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; margin: .3rem 0; }
+    label { color: #7dd3fc; font-size: .85rem; }
+    .output { background: #071120; border: 1px solid #1e3a5f; border-radius: 6px; padding: .75rem 1rem; min-height: 44px; margin-top: .5rem; color: #7dd3fc; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <h1>Asignación 10 - Callbacks</h1>
+
+  <h2>1. Temporizador</h2>
+  <div class="row">
+    <label>Segundos:</label>
+    <select id="secs">
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select>
+    <button onclick="iniciarTemporizador()">Iniciar</button>
+  </div>
+  <div class="output" id="out1">// presiona el botón</div>
+
+  <h2>2. Operaciones Matemáticas con Callback</h2>
+  <div class="row">
+    <input type="number" id="numA" value="10" style="width:70px" />
+    <select id="opSel">
+      <option value="+">+</option>
+      <option value="-">−</option>
+      <option value="*">×</option>
+      <option value="/">÷</option>
+    </select>
+    <input type="number" id="numB" value="3" style="width:70px" />
+    <button onclick="calcular()">Calcular</button>
+  </div>
+  <div class="output" id="out2">// presiona el botón</div>
+
+  <h2>3. Preparación de una Receta</h2>
+  <button onclick="prepararReceta()">Preparar receta</button>
+  <div class="output" id="out3">// presiona el botón</div>
+
+  <script src="temporizador.js"></script>
+  <script src="operaciones.js"></script>
+  <script src="receta.js"></script>
+
+</body>
+</html>
